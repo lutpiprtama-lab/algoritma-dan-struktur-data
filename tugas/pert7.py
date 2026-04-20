@@ -1,5 +1,5 @@
 # ============================================
-# TUGAS NIM GANJIL
+# NIM GANJIL
 # Menu:
 # 1. A pangkat N (tampilkan tiap langkah)
 # 2. Hitung deret: 1 - 2/3 + 5/8 - 13/21 + ...
@@ -57,7 +57,6 @@ def menu():
             hitung_pangkat(a, n)
 
         elif pilih == "2":
-            input("Masukkan : ")          # input pertama (sesuai tampilan di gambar)
             jumlah_n = int(input("Masukkan jumlah N : "))
             hasil = hitung_deret(jumlah_n)
             print(f"{hasil:.7f}")
