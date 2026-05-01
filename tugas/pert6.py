@@ -1,30 +1,23 @@
-# ============================================
-# NIM GANJIL
-# Menu:
-# 1. A pangkat N (tampilkan tiap langkah)
-# 2. Hitung deret: 1 - 2/3 + 5/8 - 13/21 + ...
-# 0. Keluar
-# ============================================
 
-def hitung_pangkat(a, n):
+
+def hitung_pangkat(a, b):
     """Menghitung a pangkat n dan menampilkan hasil tiap langkah"""
     hasil = 1
-    for i in range(1, n + 1):
+    for i in range(1, b + 1):
         hasil *= a
         print(f"hasil {a} pangkat {i} adalah {hasil}")
 
 
 def hitung_deret(jumlah_n):
-    """
-    Menghitung deret: 1 - 2/3 + 5/8 - 13/21 + ...
+    """"
     Pola:
       Pembilang: 1, 2, 5, 13  => p(n) = 3*p(n-1) - p(n-2)
       Penyebut:  1, 3, 8, 21  => q(n) = 3*q(n-1) - q(n-2)
       Tanda: +, -, +, -, ...
     """
     total = 0.0
-    p = [1, 2]   # pembilang suku ke-1 dan ke-2
-    q = [1, 3]   # penyebut  suku ke-1 dan ke-2
+    p = [1, 2] 
+    q = [1, 3] 
 
     for i in range(jumlah_n):
         if i == 0:
@@ -46,15 +39,15 @@ def hitung_deret(jumlah_n):
 def menu():
     while True:
         print("\nmenu pilihan")
-        print("1. A pangkat B")
-        print("2. Hitung 1 - 2/3 + 5/8 - 13/21 +")
+        print("1. a pangkat b")
+        print("2. hitung deret")
         print("0. keluar")
         pilih = input("Masukkan :").strip()
 
         if pilih == "1":
             a = int(input("masukan suatu bilangan bulat :"))
-            n = int(input("masukan pangkat yang diinginkan : "))
-            hitung_pangkat(a, n)
+            b = int(input("masukan pangkat yang diinginkan : "))
+            hitung_pangkat(a, b)
 
         elif pilih == "2":
             jumlah_n = int(input("Masukkan jumlah N : "))
