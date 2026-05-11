@@ -21,7 +21,7 @@ for nim,daftar_nilai in nilai.items():
 
     rata_mk=[]
 
-    for i range(len(mata_kuliah)):
+    for i range(len(mata_kuliah)) :
         total = 0
         for nim in nilai:
             total += nilai[nim][i]
@@ -29,4 +29,3 @@ for nim,daftar_nilai in nilai.items():
         rata_mk.append(rata)
     
     index_mk_terkecil = rata_mk.index(min(rata_mk))
-
